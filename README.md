@@ -31,3 +31,7 @@ apt update
 apt install {packages}
 pwd # whatever you want in ubuntu terminal!
 ```
+5. container 안에 있는 경로로 접근하고 싶다면, {container name):{container path}와 같이 작성해주면 된다.
+```
+docker cp ./ my_container:./dir1/
+``` 
