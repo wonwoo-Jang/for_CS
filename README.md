@@ -27,8 +27,12 @@ docker는 다음과 같은 방식으로 사용한다.
 
 1. 이미지 만들기: ```docker pull ubuntu:latest #for create ubuntu os env```
 2. 만들어진 이미지 확인: ```docker images```
-3. 이미지를 바탕으로 container 실행 ```docker run -it --name {container name} ubuntu:latest```
-4. 이제 container를 이용해 layer를 쌓아보자!
+3. 이미지를 바탕으로 container 실행
+ ```
+docker run -it --name {container name} ubuntu:latest #create new container
+docker exec -it {container name} /bin/bash #implement existed container
+```
+5. 이제 container를 이용해 layer를 쌓아보자!
 ```
 apt update
 apt install {packages}
