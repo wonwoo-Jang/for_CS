@@ -35,7 +35,7 @@ docker는 다음과 같은 방식으로 사용한다.
 docker run -it --name {container name} ubuntu:latest #create new container
 docker exec -it {container name} /bin/bash #implement existed container
 ```
-5. 이제 container를 이용해 layer를 쌓아보자!
+4. 이제 container를 이용해 layer를 쌓아보자!
 ```
 apt update
 apt install {packages}
@@ -43,13 +43,13 @@ pwd # whatever you want in ubuntu terminal!
 ```
 5. container에서 충분히 환경 세팅을 했다면, 이제 container를 나와보자.
 
-**로컬에서 conatiner로 파일 복사**는 local terminal에서 해야 하기 떄문이다.
+**로컬에서 conatiner로 파일 복사**는 local terminal에서 해야 하기 때문이다.
 ```
 new terminal을 하나 더 열어서 거기서 작업!(백그라운드로 container는 실행해야 함)
 exit #container terminate & exit: 주의! container까지 실행종료
 docker ps #show what container is running
 ```
-6. 로컬에서 container 안에 있는 경로로 접근하고 싶다면, {container name):{container path}와 같이 작성해주면 된다.
+6. 로컬에서 container 안에 있는 경로로 접근하고 싶다면, {container name}:{container path}와 같이 작성해주면 된다.
 ```
 docker cp ./ my_container:./dir1/
 ``` 
